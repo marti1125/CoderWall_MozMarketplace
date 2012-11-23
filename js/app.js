@@ -1,6 +1,10 @@
 $(document).ready(function() {	
-
+	
 	$('#btnSearch').click(function(){
+
+		$('#result').html('');
+		$('#bimg').html('');
+		$('#btext').html('');
 
 		var search = $("#username").val();
 
@@ -12,15 +16,15 @@ $(document).ready(function() {
 				var location = val.location;
 				var github = val.accounts.github;
 				$('#result').append('<h1>'+name+'</h1>');
-				$('#result').append('<h2>'+location+'</h2>');
-				$('#result').append('<h3>'+username+'</h3>');				
-				$('#result').append('<p>Github account: '+github+'</p>');
+				$('#result').append('<h2>'+location+'</h2>');								
+				$('#result').append('<p>Github account: <a href=https://github.com/'+github+' target=_blank>'+github+'</a></p>');
 
 				$.each(val.badges, function (key2, val2) {
 					var badge_name = val2.name;
 					var badge_desp = val2.description;
 					var badge_img = val2.badge;
-					$('#result').append('<p>'+badge_desp+': <img src='+badge_img+'/></p>');
+					$('#bimg').append('<img src='+badge_img+'/>');
+					$('#btext').append('<br/><br/><br/><br/><br/><br/><p>'+badge_desp+'</p>');
 				});	
 
 			});
