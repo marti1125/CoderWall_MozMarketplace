@@ -24,7 +24,7 @@ $(document).ready(function() {
 					var badge_desp = val2.description;
 					var badge_img = val2.badge;
 					$('#bimg').append('<img src='+badge_img+'/>');
-					$('#btext').append('<br/><br/><br/><br/><br/><br/><p>'+badge_desp+'</p>');
+					$('#bimg').append('<p>'+badge_name+'</p>');
 				});	
 
 			});
