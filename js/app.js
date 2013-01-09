@@ -68,7 +68,7 @@ $(document).ready(function () {
                         var badge_name = val2.name;
                         var badge_desp = val2.description;
                         var badge_img = val2.badge;
-                        $('#bimg').append('<li class="badge"><figure><img src=' + badge_img + '/><figcaption><p>' + badge_desp + '</p><b>' + badge_name + '</b></figcaption></figure></li>');                       
+                        $('#bimg').append('<li class="bassdge"><figure><img src=' + badge_img + '/><figcaption><p id=despt >' + badge_desp + '</p><b class=name>' + badge_name + '</b></figcaption></figure></li>');                       
 
                     });
 
