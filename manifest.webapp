@@ -1,0 +1,25 @@
+{
+  "name": "CoderWall",
+  "description": "CoderWall Badges Viewer",
+  "developer": {
+    "name": "Willy Aguirre",
+    "url": "https://github.com/marti1125/CoderWall_MozMarketplace"
+  },
+  "locales": {
+    "en-US": {
+      "name": "CoderWall",
+      "description": "CoderWall Badges Viewer"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "16": "http://marti1125.github.com/WebApp-OpenStreetMap/img/icons/OpenStreetMap.png",
+    "30": "http://marti1125.github.com/WebApp-OpenStreetMap/img/icons/OpenStreetMap.png",
+    "32": "http://marti1125.github.com/WebApp-OpenStreetMap/img/icons/OpenStreetMap.png",
+    "48": "http://marti1125.github.com/WebApp-OpenStreetMap/img/icons/OpenStreetMap.png",
+    "60": "http://marti1125.github.com/WebApp-OpenStreetMap/img/icons/OpenStreetMap.png",
+    "64": "http://marti1125.github.com/WebApp-OpenStreetMap/img/icons/OpenStreetMap.png",
+    "128": "http://marti1125.github.com/WebApp-OpenStreetMap/img/icons/OpenStreetMap.png",
+    "256": "http://marti1125.github.com/WebApp-OpenStreetMap/img/icons/OpenStreetMap.png"    
+  }
+}
