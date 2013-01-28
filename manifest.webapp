@@ -9,7 +9,17 @@
   "locales": {
     "en-US": {
       "name": "CoderWall",
-      "description": "CoderWall Badges Viewer"
+      "description": "CoderWall Badges Viewer",
+      "developer": {
+        "url": "https://github.com/marti1125/CoderWall_MozMarketplace"
+      }
+    },
+    "es": {
+      "name": "CoderWall",
+      "description": "Visor de Medallas",
+      "developer": {
+        "url": "https://github.com/marti1125/CoderWall_MozMarketplace"
+      }
     }
   },
   "default_locale": "en-US",
@@ -22,5 +32,11 @@
     "64": "/img/icons/64.png",
     "128": "/img/icons/128.png",
     "256": "/img/icons/256.png"    
+  },
+  "permissions": {
+    "network-http": {
+      "description": "json"
+    }
   }
+
 }
