@@ -14,7 +14,7 @@
         "url": "https://github.com/marti1125/CoderWall_MozMarketplace"
       }
     },
-    "es": {
+    "es-ES": {
       "name": "CoderWall",
       "description": "Visor de Medallas",
       "developer": {
@@ -34,7 +34,7 @@
     "256": "/img/icons/256.png"    
   },
   "permissions": {
-    "network-http": {
+    "systemXHR": {
       "description": "json"
     }
   }
