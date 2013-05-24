@@ -1,29 +1,56 @@
-ul {
+html, body {
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
-	text-align: center;
-	display: inline-block !important;	
+	font-size: 10px;
+	background-color: #fff;
 }
-
-li {
-	text-decoration: none;
-	display: inline-block !important;	
-	text-align: center;
-	display: inline;
-	line-height: -1px !important;
-
+ 
+body {
+	height: 100%;
+	display: block;
+	overflow: hidden;
 }
-
-.badge {
-	width: 250px;
-	height: 300px;	
-	text-align: center;
-    white-space: normal !important;
-    margin: 10px !important;    
-    display: inline-block !important;    
+ 
+section[role="region"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
 }
-
-b{
-	color: black;
+ 
+#settings-view {
+	z-index: 10;
+}
+ 
+.move-down {
+	transform: translateY(100%);
+	transition: all 0.2s;
+}
+ 
+.move-up {
+	transform: translateY(0);
+	transition: all 0.2s;
+}
+ 
+section[role="region"] > header:first-child .icon.icon-settings {
+	background-image: url(images/settings.png);
+}
+ 
+[data-type="list"] li > a aside img {
+	height: 4rem;
+	width: 4rem;
+	margin: 1rem 1rem 0 0;
+}
+ 
+[data-type="list"] li > a aside.pack-end.install {
+	background: url(images/download.png) no-repeat;
+	height: 3rem;
+	width: 3rem;
+	margin: 1.5rem 0 0 1rem;
+}
+ 
+#settings-view form {
+	margin: 1.5rem;
 }
