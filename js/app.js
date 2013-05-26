@@ -1,20 +1,13 @@
-$('#reset').click(function(){	
-	$('#username').html('');
+$('#btnreset').click(function(){	
+	$('#username').val('');
 });
 
-var btnSettings = document.querySelector("#settings-btn");
-
-var viewSettings = document.querySelector("#settings-view");
-
-btnSettings.addEventListener ('click', function () {
-	viewSettings.classList.remove('move-down');
-	viewSettings.classList.add('move-up');
+$("#settings-btn").click(function(){
+	$("#settings-view").removeClass('move-down');
+	$("#settings-view").addClass('move-up');
 });
 
-var btnCloseSettings = document.querySelector("#close-btn");
-
-btnCloseSettings.addEventListener ('click', function () {
-	viewSettings.classList.remove('move-up');
-	viewSettings.classList.add('move-down');
+$("#close-btn").click(function() {
+	$("#settings-view").removeClass('move-up');
+	$("#settings-view").addClass('move-down');
 });
-
