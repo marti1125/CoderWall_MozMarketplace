@@ -20,28 +20,7 @@
 
             </header>
             <article id="appList" data-type="list">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <aside>
-                                <img src="css/images/default.png">
-                            </aside>
-                            <aside class="pack-end install"></aside>
-                            <p>App 1</p>
-                            <p>App developer</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <aside>
-                                <img src="css/images/default.png">
-                            </aside>
-                            <aside class="pack-end install"></aside>
-                            <p>App 2</p>
-                            <p>App developer</p>
-                        </a>
-                    </li>
-                </ul>
+                
             </article>
         </section>
         
@@ -61,16 +40,22 @@
                     <p>
                         <input id="username" type="text" placeholder="username">
                         <button id="btnreset" type="reset">Clear</button>
+                        <div id="badges"></div>
                     </p>                    
                 </form>
             </article>
         </section>
 
 <!-- js -->
-<script src="js/zepto.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="js/underscore-min.js"></script>
 <script src="js/backbone-min.js"></script>
-<script src="js/app.js"></script>
+<script src="js/data.js"></script>
+<!--script src="js/app.js"></script-->
+
+<script id="template" type="text/template">
+    <div class="username"><%= username %></div>
+</script>
 
 </body>
 </html>
