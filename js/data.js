@@ -25,6 +25,6 @@ $(function() {
 	badgeList.bind('reset', function () {
 		$("#badges").append(badgeView.render().$el);
     }); 
-	badgeList.fetch();
+	badgeList.fetch({reset: true});
 
 });
