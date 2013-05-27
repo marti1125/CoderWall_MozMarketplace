@@ -6,27 +6,25 @@ $(function() {
 		model: Badge,
 		url: 'https://coderwall.com/marti1125.json?callback=?',
 		parse: function(response) {				
-			return response;
+			return response.badges;
 		}
 	});	
 
-	var viewBadges = Backbone.View.extend({
-		el: "#badges",
+	var viewBadges = Backbone.View.extend({			
 		initialize: function(){
-            this.render();
+            this.template = _.template( $("#template").val());
         },
-        render: function () {           
-            var template = _.template( $("#template").html(), {} );
-    		this.$el.html(this.template,(this.model.toJSON()));
+        render: function () { 
+    		this.$el.html(this.template({badge: this.model.toJSON()}));
     		return this;
         }
 	});
 	
 	var badgeList = new BadgeList();
-	var badgeView = new viewBadges({model: badgeList});	
-	badgeList.fetch();
+	var badgeView = new viewBadges({model: badgeList});		
 	badgeList.bind('reset', function () {
-        badgeView.render();
-    });    
+		$("#badges").append(badgeView.render().$el);
+    }); 
+	badgeList.fetch();
 
 });
