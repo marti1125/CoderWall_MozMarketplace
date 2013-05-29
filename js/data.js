@@ -6,13 +6,13 @@ $(function() {
 		model: Badge,
 		url: 'https://coderwall.com/marti1125.json?callback=?',
 		parse: function(response) {				
-			return response.badges;
+			return response.data.badges;
 		}
 	});	
 
 	var viewBadges = Backbone.View.extend({			
 		initialize: function(){
-            this.template = _.template( $("#template").val());
+            this.template = _.template( $("#template").html());
         },
         render: function () { 
     		this.$el.html(this.template({badge: this.model.toJSON()}));

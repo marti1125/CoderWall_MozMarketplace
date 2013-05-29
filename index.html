@@ -16,7 +16,7 @@
                     </button>
                 </menu>
                 
-			<h1>FirefoxOS</h1>
+			<h1>CoderWall</h1>
 
             </header>
             <article id="appList" data-type="list">
@@ -47,14 +47,16 @@
         </section>
 
 <!-- js -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="js/zepto.min.js"></script>
 <script src="js/underscore-min.js"></script>
 <script src="js/backbone-min.js"></script>
 <script src="js/data.js"></script>
-<!--script src="js/app.js"></script-->
+<script src="js/app.js"></script>
 
 <script id="template" type="text/template">
-    <%= badge.name %>
+	<% _.each(badge, function(b) { %>
+		<%= b.name %>
+	<% }) %>
 </script>
 
 </body>
