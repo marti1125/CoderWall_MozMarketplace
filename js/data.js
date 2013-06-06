@@ -19,7 +19,8 @@ $(function() {
 			initialize: function(){
 				this.template = _.template( $("#template").html());
 			},
-			render: function () { 
+			render: function () {
+				$('#messageEntry').html('');
 				this.$el.html(this.template({badge: this.model.toJSON()}));
 				return this;
 			}
@@ -34,6 +35,7 @@ $(function() {
 		
 		$("#settings-view").removeClass('move-up');
 		$("#settings-view").addClass('move-down');
+		
 		
 	});
 	

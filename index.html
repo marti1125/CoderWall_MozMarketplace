@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/headers.css" />
     <link rel="stylesheet" type="text/css" href="css/lists.css" />
     <link rel="stylesheet" type="text/css" href="css/input_areas.css" />
+	<link rel="stylesheet" type="text/css" href="css/progress_activity.css" />
     <link rel="stylesheet" type="text/css" href="css/app.css" />
 </head>
 <body>
@@ -20,7 +21,7 @@
 
             </header>
             <article id="badges" data-type="list">
-                
+                <div id="messageEntry"><progress></progress></div>
             </article>
         </section>
         
@@ -54,7 +55,14 @@
 
 <script id="template" type="text/template">	
 	<% _.each(badge, function(b) { %>
-		<li><%= b.name %></li>
+		<li>
+			<aside class="pack-end">
+				<img alt="placeholder" src="<%= b.badge %>">
+			</aside>
+			<a href="#">
+				<p><strong><%= b.name %></strong></p>			
+			</a>
+		</li>
 	<% }) %>	
 </script>
 
