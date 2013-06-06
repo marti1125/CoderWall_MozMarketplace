@@ -21,6 +21,7 @@ $(function() {
 			},
 			render: function () {
 				$('#messageEntry').html('');
+				$('#messageEntry').css('padding-top','0%');
 				this.$el.html(this.template({badge: this.model.toJSON()}));
 				return this;
 			}
@@ -34,8 +35,7 @@ $(function() {
 		badgeList.fetch({reset: true});
 		
 		$("#settings-view").removeClass('move-up');
-		$("#settings-view").addClass('move-down');
-		
+		$("#settings-view").addClass('move-down');		
 		
 	});
 	
