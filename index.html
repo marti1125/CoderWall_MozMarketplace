@@ -19,8 +19,8 @@
 			<h1>CoderWall</h1>
 
             </header>
-            <article data-type="list">
-                <ul id="badges"></ul>
+            <article id="badges" data-type="list">
+                
             </article>
         </section>
         
@@ -52,12 +52,10 @@
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
 
-<script id="template" type="text/template">
-	<li>
+<script id="template" type="text/template">	
 	<% _.each(badge, function(b) { %>
-		<%= b.name %>
-	<% }) %>
-	</li>
+		<li><%= b.name %></li>
+	<% }) %>	
 </script>
 
 </body>

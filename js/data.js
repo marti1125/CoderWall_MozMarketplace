@@ -14,7 +14,8 @@ $(function() {
 			}
 		});	
 
-		var viewBadges = Backbone.View.extend({			
+		var viewBadges = Backbone.View.extend({
+			tagName: "ul",		
 			initialize: function(){
 				this.template = _.template( $("#template").html());
 			},
