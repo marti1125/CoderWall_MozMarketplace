@@ -15,13 +15,14 @@ $(function() {
 		});	
 
 		var viewBadges = Backbone.View.extend({
-			tagName: "ul",		
+			tagName: "ul",
+			className: "badgeslist",
 			initialize: function(){
 				this.template = _.template( $("#template").html());
 			},
 			render: function () {
 				$('#messageEntry').html('');
-				$('#messageEntry').css('padding-top','0%');
+				$('#messageEntry').css('display','none');
 				this.$el.html(this.template({badge: this.model.toJSON()}));
 				return this;
 			}

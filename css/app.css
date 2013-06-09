@@ -19,7 +19,7 @@ section[role="region"] {
 	bottom: 0;
 	background: #fff;
 }
- 
+
 #settings-view {
 	z-index: 10;
 }
@@ -57,4 +57,11 @@ section[role="region"] > header:first-child .icon.icon-settings {
 #messageEntry {
 	padding-top: 50%;
 	padding-left: 45%;
+}
+.badgeslist {
+    padding-right: 15px !important;	
+	overflow-y:visible !important;
+	width: 100% !important;	
+	height: 410px !important;
+	position:relative !important;
 }

@@ -11,38 +11,40 @@
 </head>
 <body>
 	<section role="region" id="list-view">
-            <header>
-                <menu type="toolbar">
-                    <button id="settings-btn"><span class="icon icon-settings">settings</span>
-                    </button>
-                </menu>
-                
-			<h1>CoderWall</h1>
+        <header>
+            <menu type="toolbar">
+                <button id="settings-btn"><span class="icon icon-settings">settings</span>
+                </button>
+            </menu>
+            
+		<h1>CoderWall</h1>
 
-            </header>
-            <article id="badges" data-type="list">
-                <div id="messageEntry"><progress></progress></div>
-            </article>
+        </header>
+
+        <section id="badges" data-type="list">                
+            <div id="messageEntry"><progress></progress></div>            
         </section>
         
-        <section role="region" id="settings-view" class="skin-organic">
-            <header>
-                <menu type="toolbar">
-                    <button id="search">Go</button>
-                </menu>
-                
-			<h1>Search</h1>
-			
-            </header>
-            <article>
-                <form>
-                    <p>
-                        <input id="username" type="text" placeholder="username">
-                        <button id="btnreset" type="reset">Clear</button>                        
-                    </p>                    
-                </form>
-            </article>
-        </section>
+    </section>
+        
+    <section role="region" id="settings-view" class="skin-organic">
+        <header>
+            <menu type="toolbar">
+                <button id="search">Go</button>
+            </menu>
+            
+		<h1>Search</h1>
+		
+        </header>
+        <article>
+            <form>
+                <p>
+                    <input id="username" type="text" placeholder="username">
+                    <button id="btnreset" type="reset">Clear</button>                        
+                </p>                    
+            </form>
+        </article>
+    </section>
 
 <!-- js -->
 <script src="js/zepto.min.js"></script>

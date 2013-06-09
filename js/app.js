@@ -1,3 +1,7 @@
+var xhr = new XMLHttpRequest({
+    mozSystem: true
+});
+
 $('#btnreset').click(function(){	
 	$('#username').val('');
 });
