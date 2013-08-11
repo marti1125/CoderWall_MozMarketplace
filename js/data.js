@@ -1,7 +1,7 @@
 $(function() {
 
 	$('#search').click(function(){
-	
+		
 		var username = $('#username').val();
 		
 		var Badge = Backbone.Model.extend({});
@@ -21,8 +21,8 @@ $(function() {
 				this.template = _.template( $("#template").html());
 			},
 			render: function () {
-				$('#messageEntry').html('');
-				$('#messageEntry').css('display','none');
+				$('#username').val('');
+				$('#badges').html('');				
 				this.$el.html(this.template({badge: this.model.toJSON()}));
 				return this;
 			}
