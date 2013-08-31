@@ -34,7 +34,9 @@
     "256": "/img/icons/256.png"    
   },
   "permissions": {
-    "systemXHR": {}
+    "systemXHR": {
+      "description": "json"
+    }
   }
 
 }
