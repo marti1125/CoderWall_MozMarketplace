@@ -65,3 +65,19 @@ section[role="region"] > header:first-child .icon.icon-settings {
 	height: 410px !important;
 	position:relative !important;
 }
+.blockUI.blockMsg.blockPage {
+	color: white !important;
+	font-family: sans-serif !important;
+	border: none !important;
+	background-color: black !important;
+	opacity: 0.7; !important;
+	border-radius: 25px !important; 
+}
+
+@media screen and (max-width: 320px){
+    .blockUI.blockMsg.blockPage {
+		font-size: 9px !important;
+		width: 200px !important;
+		left: 20% !important;
+	}
+}

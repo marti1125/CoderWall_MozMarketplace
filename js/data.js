@@ -4,11 +4,13 @@ $('#search').click(function(){
 
 	if(username != ''){
 
+		$.blockUI({ message: '<h1>Just a moment...</h1>'});
+
 		$.ajax({
 			url: 'https://coderwall.com/' + username + '.json?callback=?',
 			dataType: "json",
 			timeout: 10000,
-			success: function (data) {
+			success: function (data) {				
 
 				var Badge = Backbone.Model.extend({});
 		 
@@ -39,19 +41,22 @@ $('#search').click(function(){
 				badgeList.bind('reset', function () {
 					$("#badges").html(badgeView.render().$el);
 				}); 
-				badgeList.fetch({reset: true});		
+				badgeList.fetch({reset: true});
+				$.unblockUI();
 				$("#settings-view").removeClass('move-up');
 				$("#settings-view").addClass('move-down');
 
 			},
 			error: function (data) {
+				$.unblockUI();
 				$('#username').val('');
-				alert('User does not exist')
+				alert('User does not exist');
 			}
+
 		});
-		
+
 	} else {
-		alert('is not must empty')
+		alert('The user must enter')
 	}	
 		
 });	
