@@ -1,43 +1,57 @@
-$(function() {
+$('#search').click(function(){
 
-	$('#search').click(function(){
-		
-		var username = $('#username').val();
-		
-		var Badge = Backbone.Model.extend({});
-	 
-		var BadgeList = Backbone.Collection.extend({
-			model: Badge,
-			url: 'https://coderwall.com/'+username+'.json?callback=?',
-			parse: function(response) {				
-				return response.data.badges;
-			}
-		});	
+	var username = $('#username').val();
 
-		var viewBadges = Backbone.View.extend({
-			tagName: "ul",
-			className: "badgeslist",
-			initialize: function(){
-				this.template = _.template( $("#template").html());
+	if(username != ''){
+
+		$.ajax({
+			url: 'https://coderwall.com/' + username + '.json?callback=?',
+			dataType: "json",
+			timeout: 10000,
+			success: function (data) {
+
+				var Badge = Backbone.Model.extend({});
+		 
+				var BadgeList = Backbone.Collection.extend({
+					model: Badge,
+					url: 'https://coderwall.com/'+username+'.json?callback=?',
+					parse: function(response) {				
+						return response.data.badges;
+					}
+				});	
+
+				var viewBadges = Backbone.View.extend({
+					tagName: "ul",
+					className: "badgeslist",
+					initialize: function(){
+						this.template = _.template( $("#template").html());
+					},
+					render: function () {
+						$('#username').val('');
+						$('#badges').html('');								
+						this.$el.html(this.template({badge: this.model.toJSON()}));
+						return this;
+					}
+				});
+				
+				var badgeList = new BadgeList();
+				var badgeView = new viewBadges({model: badgeList});		
+				badgeList.bind('reset', function () {
+					$("#badges").html(badgeView.render().$el);
+				}); 
+				badgeList.fetch({reset: true});		
+				$("#settings-view").removeClass('move-up');
+				$("#settings-view").addClass('move-down');
+
 			},
-			render: function () {
+			error: function (data) {
 				$('#username').val('');
-				$('#badges').html('');				
-				this.$el.html(this.template({badge: this.model.toJSON()}));
-				return this;
+				alert('User does not exist')
 			}
 		});
 		
-		var badgeList = new BadgeList();
-		var badgeView = new viewBadges({model: badgeList});		
-		badgeList.bind('reset', function () {
-			$("#badges").append(badgeView.render().$el);
-		}); 
-		badgeList.fetch({reset: true});
+	} else {
+		alert('is not must empty')
+	}	
 		
-		$("#settings-view").removeClass('move-up');
-		$("#settings-view").addClass('move-down');		
-		
-	});
-	
-});
+});	
